@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Cascadia Mono', 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+
+body {
+    background: #181818;
+    color: #ffffff;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #dfb2f4;
+    animation: hue 10000ms linear 0ms infinite normal forwards;
+    margin: 0.5rem;
+}
+
+#stats {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+@keyframes hue {
+    0% {filter: hue-rotate(0deg)}
+    100% {filter: hue-rotate(360deg)}
+}
+
+.content {
+    margin: auto;
+    width: 40%;
+    min-width: 450px;
+}
+
+.content > * {
+    margin-bottom: 1rem;
+}
+
+#words {
+    text-align: justify;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: auto;
+}
+
+.input {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    height: calc(2rem + 2px);
+    font-size: x-large;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #dddddd;
+    padding-left: 0.5rem;
+}
+
+.input:focus {
+    outline: none;
+    background: #ffffff;
+}
+
+.reset {
+    font-size: x-large;
+    background: #dfb2f4;
+    animation: hue 10000ms linear 0ms infinite normal forwards;
+    border: transparent;
+    border-radius: 4px;
+    grid-column-start: 6;
+    grid-column-end: 7;
+}
+
+.correct {
+    color: #a4ffa4;
+}
+
+.incorrect {
+    color: #e2748f;
+}
+
+.active {
+    color: #dfb2f4;
+    animation: hue 10000ms linear 0ms infinite normal forwards;
+}
